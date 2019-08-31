@@ -17,6 +17,7 @@ All these dotfiles are about:
 
 - git
 - tmux
+- ssh
 - TODO zsh
 - TODO vim
 
