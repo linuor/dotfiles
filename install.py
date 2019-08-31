@@ -18,6 +18,8 @@ subprocess.run(["git", "config", "--global", "user.email",\
 subprocess.run(["git", "config", "--global", "core.excludesfile",\
         pkg_dir + "/git/global.gitignore"], check=True)
 
+os.symlink(pkg_dir + "/tmux/tmux.conf", os.path.expanduser("~/.tmux.conf"))
+
 local_ini.close()
 default_ini.close()
 

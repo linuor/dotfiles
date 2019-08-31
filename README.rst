@@ -16,7 +16,8 @@ Design principles are:
 All these dotfiles are about:
 
 - git
-- zsh
+- tmux
+- TODO zsh
 - TODO vim
 
 *****
