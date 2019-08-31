@@ -5,7 +5,7 @@ import configparser
 import os, os.path
 import subprocess
 
-pkg_dir = os.path.dirname(__file__)
+pkg_dir = os.path.abspath(os.path.dirname(__file__))
 conf = configparser.ConfigParser()
 default_ini = open(pkg_dir + "/default.ini")
 conf.read_file(default_ini)
@@ -18,6 +18,6 @@ subprocess.run(["git", "config", "--global", "user.email",\
 subprocess.run(["git", "config", "--global", "core.excludesfile",\
         pkg_dir + "/git/global.gitignore"], check=True)
 
-close(local_ini)
-close(default_ini)
+local_ini.close()
+default_ini.close()
 
